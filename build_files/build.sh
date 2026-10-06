@@ -33,3 +33,11 @@ cat <<EOF > /boot/grub2/custom.cfg
 set timeout_style=hidden
 set timeout=0
 EOF
+
+echo "::group:: ===$(basename "$0")==="
+
+rm /usr/share/plymouth/themes/spinner/animation* 
+rm /usr/share/plymouth/themes/spinner/throbber* 
+rm /usr/share/plymouth/themes/spinner/watermark.png
+
+echo "::endgroup::"
