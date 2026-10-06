@@ -1,1 +1,2 @@
 layout = "UX433FA"
+calc_stop_command = "flatpak kill org.gnome.Calculator"
