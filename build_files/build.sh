@@ -14,6 +14,7 @@ dnf5 -y install ghostty
 ## keyd
 dnf5 -y copr enable alternateved/keyd
 dnf5 -y install keyd
+systemctl enable keyd
 
 ## lazygit
 dnf5 -y copr enable dejan/lazygit
@@ -24,6 +25,3 @@ dnf5 install -y tmux neovim
 
 ### enabling a System Unit File
 systemctl enable podman.socket
-
-# keyd
-systemctl enable keyd
