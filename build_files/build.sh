@@ -39,6 +39,11 @@ echo "::group:: ===$(basename "$0")==="
 rm /usr/share/plymouth/themes/spinner/animation* 
 rm /usr/share/plymouth/themes/spinner/throbber* 
 rm /usr/share/plymouth/themes/spinner/watermark.png
-dracut -f --reproducible
+
+# 1. Get current kernel version
+KERNEL_VERSION=$(ls /lib/modules | sort -V | tail -n 1)
+
+# 2. Rebuild initramfs directly into /usr/lib/modules (not /boot)
+dracut -f --reproducible /usr/lib/modules/"$KERNEL_VERSION"/initramfs.img "$KERNEL_VERSION"
 
 echo "::endgroup::"
