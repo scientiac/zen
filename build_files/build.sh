@@ -25,3 +25,11 @@ dnf5 install -y tmux neovim zoxide
 
 ### enabling a System Unit File
 systemctl enable podman.socket
+
+## hide grub
+# Create custom.cfg in the image stage
+mkdir -p /boot/grub2
+cat <<EOF > /boot/grub2/custom.cfg
+set timeout_style=hidden
+set timeout=0
+EOF
