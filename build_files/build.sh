@@ -21,7 +21,7 @@ dnf5 -y copr enable dejan/lazygit
 dnf5 -y install lazygit
 
 ## this installs a package from fedora repos
-dnf5 install -y tmux neovim 
+dnf5 install -y tmux neovim zoxide
 
 ### enabling a System Unit File
 systemctl enable podman.socket
