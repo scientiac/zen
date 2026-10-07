@@ -1,0 +1,15 @@
+#!/bin/bash
+
+set -exuo pipefail
+
+shopt -s nullglob
+rm -f /usr/share/plymouth/themes/spinner/animation*.png
+rm -f /usr/share/plymouth/themes/spinner/throbber*.png
+rm -f /usr/share/plymouth/themes/spinner/watermark.png
+shopt -u nullglob
+
+KERNEL_VERSION=$(ls /lib/modules | grep -E 'fc|el' | tail -n1)
+export DRACUT_NO_XATTR=1
+
+dracut --no-hostonly --kver "${KERNEL_VERSION}" --reproducible -v --add ostree -f "/lib/modules/${KERNEL_VERSION}/initramfs.img"
+chmod 0600 "/lib/modules/${KERNEL_VERSION}/initramfs.img"
