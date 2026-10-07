@@ -25,10 +25,6 @@ dnf5 -y install lazygit
 ## this installs a package from fedora repos
 dnf5 install -y tmux neovim zoxide
 
-## enable Bazaar
-# dnf5 install -y bazaar
-flatpak update --appstream
-
 ### enabling a System Unit File
 systemctl enable podman.socket
 
