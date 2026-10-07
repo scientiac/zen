@@ -11,7 +11,7 @@ cp -avf "/ctx/system_files"/. /
 
 ## ghostty
 dnf5 -y copr enable scottames/ghostty
-dnf5 -y install ghostty
+dnf5 -y install ghostty nautilus-python
 
 ## keyd
 dnf5 -y copr enable alternateved/keyd
