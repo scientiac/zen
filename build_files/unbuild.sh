@@ -5,7 +5,7 @@ set -ouex pipefail
 echo "=== Cleanup Sequence Starts ==="
 
 ### unInstall packages
-dnf5 remove -y ptyxis
+dnf5 remove -y ptyxis \
  gnome-software \
  gnome-tour \
  nvtop \
