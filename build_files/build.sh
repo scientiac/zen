@@ -26,13 +26,9 @@ dnf5 -y install lazygit
 dnf5 install -y tmux neovim zoxide
 
 ## enable Bazaar
-export HOME=/var/root
-mkdir -p "$HOME/.local/share"
-dnf5 install -y flatpak
-flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
-flatpak remote-add --user --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+flatpak remote-add --installation=usr-system --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+flatpak install --installation=usr-system --noninteractive flathub io.github.kolunmi.Bazaar
 flatpak update --appstream
-flatpak install --system --noninteractive flathub io.github.kolunmi.Bazaar
 
 ### enabling a System Unit File
 systemctl enable podman.socket
