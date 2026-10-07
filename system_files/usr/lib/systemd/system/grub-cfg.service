@@ -1,0 +1,10 @@
+[Unit]
+Description=Configure GRUB user.cfg
+ConditionPathExists=/boot/grub2
+
+[Service]
+Type=oneshot
+ExecStart=/bin/sh -c 'printf "set timeout_style=hidden\nset timeout=0\n" > /boot/grub2/user.cfg'
+
+[Install]
+WantedBy=multi-user.target

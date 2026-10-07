@@ -26,3 +26,6 @@ dnf5 remove -y ptyxis
 
 ### enabling a System Unit File
 systemctl enable podman.socket
+
+### grub user configuration
+systemctl enable grub-cfg.service
