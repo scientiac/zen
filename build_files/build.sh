@@ -12,7 +12,8 @@ cp -avf "/ctx/system_files"/. /
 ## ghostty
 dnf5 -y copr enable scottames/ghostty
 dnf5 -y install ghostty nautilus-python
-ln -s $(which ghostty) /usr/local/bin/xdg-terminal-exec
+dnf5 -y install xdg-terminal-exec
+
 
 ## keyd
 dnf5 -y copr enable alternateved/keyd
