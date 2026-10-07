@@ -1,0 +1,5 @@
+export EDITOR="nvim"
+export VISUAL="nvim"
+export SUDO_EDITOR="nvim"
+export PAGER="nvim -R"
+export MANPAGER="nvim +Man!"
