@@ -2,6 +2,8 @@
 
 set -ouex pipefail
 
+echo "=== Installations Start ==="
+
 # copy the contents of system_files/ of the git repo to /
 cp -avf "/ctx/system_files"/. /
 
@@ -22,10 +24,14 @@ dnf5 -y install lazygit
 
 ## this installs a package from fedora repos
 dnf5 install -y tmux neovim zoxide
-dnf5 remove -y ptyxis
+
+## enable Bazaar
+flatpak install --system --noninteractive --location=/usr/share/flatpak flathub io.github.kolunmi.Bazaar
 
 ### enabling a System Unit File
 systemctl enable podman.socket
 
 ### grub user configuration
 systemctl enable grub-cfg.service
+
+echo "=== Installations End ==="

@@ -2,7 +2,7 @@
 
 set -ouex pipefail
 
-echo "=== Numpad Driver Installation Starts ==="
+echo "=== Numpad Driver Configuration Starts ==="
 
 # Install Dependencies
 dnf install -y libevdev libevdev-devel rust cargo
@@ -18,4 +18,4 @@ systemctl enable asus-numpad.service
 # Clean up build toolchain to keep image size small
 dnf remove -y rust cargo libevdev-devel
 
-echo "=== Numpad Driver Installation Ends ==="
+echo "=== Numpad Driver Configuration Ends ==="
