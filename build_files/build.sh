@@ -32,7 +32,7 @@ dnf5 install -y flatpak
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 flatpak remote-add --user --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 flatpak update --appstream
-flatpak install --system --noninteractive --location=/usr/share/flatpak flathub io.github.kolunmi.Bazaar
+flatpak install --system --noninteractive flathub io.github.kolunmi.Bazaar
 
 ### enabling a System Unit File
 systemctl enable podman.socket
