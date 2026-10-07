@@ -26,7 +26,7 @@ dnf5 -y install lazygit
 dnf5 install -y tmux neovim zoxide
 
 ## enable Bazaar
-dnf5 install -y bazaar
+# dnf5 install -y bazaar
 flatpak update --appstream
 
 ### enabling a System Unit File
