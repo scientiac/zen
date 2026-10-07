@@ -26,8 +26,7 @@ dnf5 -y install lazygit
 dnf5 install -y tmux neovim zoxide
 
 ## enable Bazaar
-flatpak remote-add --installation=usr-system --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
-flatpak install --installation=usr-system --noninteractive flathub io.github.kolunmi.Bazaar
+dnf5 install -y bazaar
 flatpak update --appstream
 
 ### enabling a System Unit File
