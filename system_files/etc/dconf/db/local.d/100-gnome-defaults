@@ -10,3 +10,4 @@ dash=false
 
 [org/gnome/desktop/interface]
 show-battery-percentage=true
+gtk-theme='adw-gtk3'

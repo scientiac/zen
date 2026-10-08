@@ -14,4 +14,7 @@ dnf5 -y install \
 ## Copyous Ready
 dnf5 -y install libgda libgda-sqlite
 
+## Theme
+dnf5 -y install adw-gtk3-theme
+
 echo "=== Gnome Extensions Installations End ==="
