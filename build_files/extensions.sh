@@ -11,4 +11,7 @@ dnf5 -y install \
   gnome-shell-extension-gsconnect \
   gnome-shell-extension-appindicator 
 
+## Copyous Ready
+dnf5 -y install libgda libgda-sqlite
+
 echo "=== Gnome Extensions Installations End ==="
