@@ -1,0 +1,12 @@
+[org/gnome/shell]
+enabled-extensions=['blur-my-shell@aunetx', 'just-perfection-desktop@just-perfection', 'gsconnect@andyholmes.github.io', 'appindicatorsupport@rgcjonas.gmail.com']
+favorite-apps=@as []
+
+[org/gnome/shell/extensions/just-perfection]
+theme=true
+panel=false
+panel-in-overview=true
+dash=false
+
+[org/gnome/desktop/interface]
+show-battery-percentage=true
