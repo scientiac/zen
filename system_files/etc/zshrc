@@ -1,0 +1,30 @@
+# Prompt
+autoload -U promptinit
+promptinit
+prompt pure
+
+# Completion
+setopt AUTO_MENU                # Show completion menu on second consecutive tab
+setopt ALWAYS_TO_END            # When completing, move cursor to the end of the word
+setopt AUTO_LIST                # Automatically list choices on ambiguous completion
+setopt AUTO_PARAM_SLASH         # If completed parameter is a directory, add a trailing slash
+setopt COMPLETE_IN_WORD         # Allow completion from within a word/phrase
+
+# Use vi key bindings
+bindkey -v
+
+# Reduce ESC delay (faster mode switching)
+export KEYTIMEOUT=1
+
+# Better history search (works in both insert and normal mode)
+bindkey -M vicmd 'k' history-substring-search-up
+bindkey -M vicmd 'j' history-substring-search-down
+
+# Edit command line in editor (vim-like)
+autoload -z edit-command-line
+zle -N edit-command-line
+bindkey -M vicmd 'v' edit-command-line
+
+# Search in normal mode
+bindkey -M vicmd '/' history-incremental-search-backward
+bindkey -M vicmd '?' history-incremental-search-forward
