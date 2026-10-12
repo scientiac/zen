@@ -28,3 +28,6 @@ bindkey -M vicmd 'v' edit-command-line
 # Search in normal mode
 bindkey -M vicmd '/' history-incremental-search-backward
 bindkey -M vicmd '?' history-incremental-search-forward
+
+# initialize zoxide
+eval "$(zoxide init zsh)"
