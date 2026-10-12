@@ -12,7 +12,4 @@ git clone --depth 1 https://github.com/sindresorhus/pure.git /tmp/pure
 install -m 644 /tmp/pure/pure.zsh /usr/share/zsh/site-functions/prompt_pure_setup
 install -m 644 /tmp/pure/async.zsh /usr/share/zsh/site-functions/async
 
-# Change Shell to zsh
-chsh -s $(which zsh)
-
 echo "=== Installation for Shell End ==="
