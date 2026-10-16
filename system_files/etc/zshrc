@@ -33,5 +33,5 @@ bindkey -M vicmd '?' history-incremental-search-forward
 eval "$(zoxide init zsh)"
 
 # alias
-ls='ls --color=auto'
-lg='lazygit'
+alias ls='ls --color=auto'
+alias lg='lazygit'
