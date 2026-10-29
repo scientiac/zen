@@ -40,6 +40,7 @@ RUN --mount=type=bind,from=ctx,source=/,target=/ctx \
     /ctx/numpad.sh && \
     /ctx/plymouth.sh && \
     /ctx/extensions.sh && \
+    /ctx/virt.sh && \
     /ctx/unbuild.sh
 
 ### LINTING
